@@ -1,17 +1,14 @@
+//traigo la librería de React
 import React from 'react';
+
+//traigo la librería de ReactDOM
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+import App from './components/App';
+
+import './css/estilos.css';
+
+//muestro la app de React en el DOM
+//crea un punto inicial (root) en donde la App se va a empezar a montar (dibujar)
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(<App/>);

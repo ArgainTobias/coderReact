@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  background-color: black;
+  padding: 2rem;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a h1 {
+  color: white;
+  line-height: 3px;
+}
+
+header nav ul {
+  line-height: 3px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+header nav ul li a {
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+}
+/*# sourceMappingURL=estilos.css.map */
