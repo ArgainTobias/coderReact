@@ -1,7 +1,7 @@
 const Footer = () => {
     return(
         <footer>
-            <p>Copyrigth &copy;</p>
+            <p>&copy; Copyrigth</p>
         </footer>
     );
 };
