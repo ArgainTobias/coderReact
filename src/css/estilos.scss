@@ -1,6 +1,11 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 #root{
@@ -15,25 +20,36 @@ header{
     margin-bottom: 2rem;
     a{
         text-decoration: none;
-        h1{
+        h2{
             color: white;
             line-height: 3px;
             text-transform: uppercase;
         }
     }
     nav{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        text-align: center;
         ul{
             line-height: 3px;
             display: grid;
             grid-template-columns: repeat(3,1fr);
+            list-style: none;
             li{
                 a{
                     padding: 1rem;
-                    text-align: center;
                     text-decoration: none;
                     font-size: 1.4rem;
                     color: white;
                 }
+            }
+        }
+        span{
+            line-height: 3px;
+            color: white;
+            i{
+                line-height: 3px;
+                font-size: 2.5rem;
             }
         }
     }
@@ -41,22 +57,53 @@ header{
 
 main{
     min-height: 100vh;
-    h2{
+    h1{
         text-align: center;
         text-transform: uppercase;
         font-size: 3rem;
     }
+    .productos{
+        margin: 2rem;
+        h2{
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        p{
+            padding-left: .5rem;
+        }
+    }
 }
 
 footer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
     margin-top: 2rem;
-    padding-top: 3.6rem;
+    padding: 2rem .5rem;
     background-color: black;
     min-height: 5rem;
     p{
-        font-weight: bold;
         font-size: 1.2rem;
         text-align: center;
         color: white;
+        margin-top: 1.5rem;
+        // padding-top: 1rem;
+    }
+    nav{
+        margin-bottom: 1rem;
+        ul{
+            line-height: 3px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            text-align: center;
+
+            li{
+                a{
+                    padding: 1rem;
+                    text-decoration: none;
+                    font-size: 1.4rem;
+                    color: white;
+                }
+            }
+        }
     }
 }

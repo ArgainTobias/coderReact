@@ -1,7 +1,10 @@
+import ItemListContainer from "./ItemListContainer";
+
 const Main = () => {
     return(
         <main>
-            <h2>Home</h2>
+            <h1>Home</h1>
+            <ItemListContainer clase="productos"/>
         </main>
     );
 };
