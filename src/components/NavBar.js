@@ -1,7 +1,7 @@
 import CartWidget from "./CartWidget";
 
 const NavBar = (props) => {
-    if(props.inHeader===true){
+    if(props.inHeader){
         return(
             <nav>
                 <ul>

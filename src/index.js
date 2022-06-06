@@ -4,7 +4,7 @@ import React from 'react';
 //traigo la librería de ReactDOM
 import ReactDOM from 'react-dom/client';
 
-import App from './components/App';
+import App from './App';
 
 import './css/estilos.css';
 

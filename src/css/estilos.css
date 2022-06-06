@@ -19,7 +19,8 @@ header {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   background-color: black;
-  padding: 2rem;
+  padding: 1rem;
+  padding-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -88,6 +89,48 @@ main .productos h2 {
 
 main .productos p {
   padding-left: .5rem;
+  margin-bottom: .5rem;
+}
+
+main .productos h5 {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-left: 1.4rem;
+}
+
+main .productos .div-contador {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 8rem;
+  text-align: center;
+  background-color: gray;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: .4rem;
+  margin: 1rem;
+}
+
+main .productos .div-contador p {
+  padding-top: .6rem;
+}
+
+main .productos .div-contador button {
+  background-color: gray;
+  border: none;
+  font-size: 1rem;
+  padding-top: .2rem;
+}
+
+main .productos .div-contador .vaciar {
+  text-align: center;
+  padding: .2rem;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+  background-color: lightgray;
+  font-size: .8rem;
 }
 
 footer {
@@ -97,6 +140,7 @@ footer {
       grid-template-columns: repeat(1, 1fr);
   margin-top: 2rem;
   padding: 2rem .5rem;
+  padding-bottom: 1rem;
   background-color: black;
   min-height: 5rem;
 }
