@@ -35,11 +35,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <>
         <h5>Contador</h5>
         <div className="div-contador">
-            <button className="material-symbols-outlined" onClick={disminuirContador}>close</button> 
+            <button className="restar material-symbols-outlined" onClick={disminuirContador}>close</button> 
             <p>{contador}</p> 
-            <button className="material-symbols-outlined" onClick={aumentarContador}>add</button>
-            <button className="vaciar" onClick={confirmar}>Confirmar</button>
+            <button className="sumar material-symbols-outlined" onClick={aumentarContador}>add</button>
             {/* <button className="vaciar" onClick={vaciarContador}>Vaciar</button> */}
+        </div>
+        <div className="contenedor-vaciar">
+            <button className="vaciar" onClick={confirmar}>Confirmar</button>
         </div>
         </>
     );

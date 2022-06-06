@@ -43,7 +43,6 @@ header nav {
 }
 
 header nav ul {
-  line-height: 3px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -58,14 +57,13 @@ header nav ul li a {
   color: white;
 }
 
-header nav span {
-  line-height: 3px;
+header nav button {
+  background-color: black;
   color: white;
 }
 
-header nav span i {
-  line-height: 3px;
-  font-size: 2.5rem;
+header nav button i {
+  font-size: 2rem;
 }
 
 main {
@@ -98,39 +96,62 @@ main .productos h5 {
   margin-left: 1.4rem;
 }
 
-main .productos .div-contador {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  width: 8rem;
-  text-align: center;
-  background-color: gray;
-  border: solid 1px black;
-  border-radius: 5px;
-  padding: .4rem;
-  margin: 1rem;
-}
-
-main .productos .div-contador p {
-  padding-top: .6rem;
-}
-
-main .productos .div-contador button {
-  background-color: gray;
+main .productos button {
+  background-color: white;
   border: none;
   font-size: 1rem;
   padding-top: .2rem;
 }
 
-main .productos .div-contador .vaciar {
+main .productos .div-contador {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "restar contador sumar";
+  width: 8rem;
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: .4rem;
+  margin: 1rem;
+  margin-bottom: .5rem;
+}
+
+main .productos .div-contador p {
+  padding-top: .6rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contador;
+}
+
+main .productos .div-contador .restar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: restar;
+}
+
+main .productos .div-contador .sumar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: sumar;
+}
+
+main .productos .contenedor-vaciar {
+  text-align: center;
+  width: 8rem;
+  margin: 0rem 1rem;
+}
+
+main .productos .contenedor-vaciar .vaciar {
+  grid-area: confirmar;
   text-align: center;
   padding: .2rem;
-  margin-left: 5px;
   border-radius: 5px;
   border: solid 1px black;
-  background-color: lightgray;
+  background-color: white;
   font-size: .8rem;
+  width: 100%;
 }
 
 footer {
