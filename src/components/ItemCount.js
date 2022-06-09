@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial}) => {
 
     const [contador,cambiarContador] = useState(initial);
 
@@ -27,18 +27,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
-    // const vaciarContador = () => {
-    //     cambiarContador(contador - contador);
-    // }
-
     return(
         <>
-        <h5>Contador</h5>
         <div className="div-contador">
             <button className="restar material-symbols-outlined" onClick={disminuirContador}>close</button> 
             <p>{contador}</p> 
             <button className="sumar material-symbols-outlined" onClick={aumentarContador}>add</button>
-            {/* <button className="vaciar" onClick={vaciarContador}>Vaciar</button> */}
         </div>
         <div className="contenedor-vaciar">
             <button className="vaciar" onClick={confirmar}>Confirmar</button>

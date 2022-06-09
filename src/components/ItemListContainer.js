@@ -1,13 +1,44 @@
-import ItemCount from "./ItemCount";
+import { useEffect, useState } from "react";
+import ItemList from "./ItemList";
+import productos from "../utils/productos";
+import customFetch from "../utils/customFetch";
 
 const ItemListContainer = (props) => {
-    return(
-        <div className={props.clase}>
+    
+    const [elementos, setElemento] = useState([]);
+
+    useEffect(() => {
+
+        customFetch(3000, productos)
+        .then(r => setElemento(r))
+
+    }, [elementos])
+
+    if(elementos.length > 0){
+
+        return(
+            <>
+            <section className="catalogo">
             <h2>Productos</h2>
-            <p>Acá iría el catálogo de productos</p>
-            <ItemCount stock={5} initial={1} onAdd={() => {}}/>
-        </div>
-    );
+            <div className={props.clase}>
+                <ItemList items={elementos}/>
+            </div>
+            </section>
+            </>
+        );
+
+    }
+    else{
+        return(
+            <>
+            
+            <h3>Cargando...</h3>
+
+            </>
+
+        )
+    }
+
 };
 
 export default ItemListContainer;

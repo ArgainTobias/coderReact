@@ -20,7 +20,10 @@ header{
     padding-top: 2rem;
     margin-bottom: 2rem;
     a{
+        margin-top: .5rem;
         text-decoration: none;
+        width: 25%;
+        height: 100%;
         h2{
             color: white;
             line-height: 3px;
@@ -62,12 +65,32 @@ main{
         text-transform: uppercase;
         font-size: 3rem;
     }
-    .productos{
-        margin: 2rem;
+
+    .catalogo{
+
         h2{
+            margin: 1rem;
             margin-bottom: 1.5rem;
             text-transform: uppercase;
+            
         }
+
+    }
+
+    .productos{
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+
+
+        h3{
+
+            text-align: center;
+            font-size: 100px;
+
+        }
+
         p{
             padding-left: .5rem;
             margin-bottom: .5rem;
@@ -86,11 +109,62 @@ main{
             padding-top: .2rem;
         }
 
+        .div-producto{
+
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+            margin: 1rem;
+            border: solid 1px black;
+            border-radius: 5px;
+            min-width: 9.4rem;
+            min-height: 180px;
+
+
+            h4{
+                background-color: #F0F1F2;
+                padding-top: 5px;
+                font-weight: normal;
+                border-top: solid 1px #EAEBEC;
+            }
+            
+            .tittle-prod{
+                border-bottom: solid 1px #EAEBEC;
+                border-top: none;
+                margin-bottom: 10px;
+            }
+
+            img{
+                height: 120px;
+                width: 70%;
+                margin-left: 15%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            p{
+                margin-top: .6rem;
+            }
+
+            button{
+
+                border: solid 1px #6CECEC;
+                background-color: #D3D3D3;
+                margin: .8rem;
+                padding: 3px;
+                font-weight: bold;
+                font-size: .6rem;
+
+            }
+
+        }
+
         .div-contador{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-areas: "restar contador sumar";
-            width: 8rem;
+            width: 90%;
+            // width: 9.4rem;
             text-align: center;
             border: solid 1px black;
             border-radius: 5px;
@@ -115,7 +189,8 @@ main{
 
         .contenedor-vaciar{
             text-align: center;
-            width: 8rem;
+            width: 90%;
+            // width: 9.4rem;
             margin: 0rem 1rem;
             .vaciar{
                 grid-area: confirmar;
