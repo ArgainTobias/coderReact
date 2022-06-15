@@ -85,7 +85,7 @@ main .catalogo h2 {
   text-transform: uppercase;
 }
 
-main .productos {
+main .catalogo .productos {
   margin: 2rem;
   display: -ms-grid;
   display: grid;
@@ -93,56 +93,57 @@ main .productos {
       grid-template-columns: repeat(4, 1fr);
 }
 
-main .productos h3 {
+main .catalogo .productos h3 {
   text-align: center;
   font-size: 100px;
 }
 
-main .productos p {
+main .catalogo .productos p {
   padding-left: .5rem;
   margin-bottom: .5rem;
 }
 
-main .productos h5 {
+main .catalogo .productos h5 {
   text-transform: uppercase;
   margin-top: 1rem;
   margin-left: 1.4rem;
 }
 
-main .productos button {
+main .catalogo .productos button {
   background-color: white;
   border: none;
   font-size: 1rem;
   padding-top: .2rem;
 }
 
-main .productos .div-producto {
+main .catalogo .productos .div-producto {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   text-align: center;
   margin: 1rem;
-  border: solid 1px black;
+  border: solid 1.5px black;
   border-radius: 5px;
   min-width: 9.4rem;
   min-height: 180px;
 }
 
-main .productos .div-producto h4 {
+main .catalogo .productos .div-producto h4 {
   background-color: #F0F1F2;
   padding-top: 5px;
   font-weight: normal;
   border-top: solid 1px #EAEBEC;
+  padding-bottom: 5px;
 }
 
-main .productos .div-producto .tittle-prod {
+main .catalogo .productos .div-producto .tittle-prod {
   border-bottom: solid 1px #EAEBEC;
   border-top: none;
   margin-bottom: 10px;
 }
 
-main .productos .div-producto img {
+main .catalogo .productos .div-producto img {
   height: 120px;
   width: 70%;
   margin-left: 15%;
@@ -151,11 +152,11 @@ main .productos .div-producto img {
   border-radius: 5px;
 }
 
-main .productos .div-producto p {
+main .catalogo .productos .div-producto p {
   margin-top: .6rem;
 }
 
-main .productos .div-producto button {
+main .catalogo .productos .div-producto button {
   border: solid 1px #6CECEC;
   background-color: #D3D3D3;
   margin: .8rem;
@@ -164,55 +165,81 @@ main .productos .div-producto button {
   font-size: .6rem;
 }
 
-main .productos .div-contador {
+main .div-detalle {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  text-align: center;
+  margin: 2rem;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: .5rem;
+}
+
+main .div-detalle img {
+  border-radius: 10px;
+  height: 300px;
+}
+
+main .div-detalle .div-contador-container {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+main .div-detalle .div-contador-container .div-contador {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  grid-area: c;
       grid-template-areas: "restar contador sumar";
-  width: 90%;
   text-align: center;
   border: solid 1px black;
   border-radius: 5px;
   padding: .4rem;
   margin: 1rem;
   margin-bottom: .5rem;
+  background-color: #EFEFEF;
+  width: 9rem;
 }
 
-main .productos .div-contador p {
-  padding-top: .6rem;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: contador;
-}
-
-main .productos .div-contador .restar {
+main .div-detalle .div-contador-container .div-contador .restar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: restar;
+  border: none;
 }
 
-main .productos .div-contador .sumar {
+main .div-detalle .div-contador-container .div-contador .sumar {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: sumar;
+  border: none;
 }
 
-main .productos .contenedor-vaciar {
+main .div-detalle .vaciar-container {
   text-align: center;
-  width: 90%;
   margin: 0rem 1rem;
 }
 
-main .productos .contenedor-vaciar .vaciar {
+main .div-detalle .vaciar-container .vaciar {
   grid-area: confirmar;
   text-align: center;
   padding: .2rem;
   border-radius: 5px;
   border: solid 1px black;
-  background-color: white;
   font-size: .8rem;
-  width: 100%;
+  background-color: #EFEFEF;
+  width: 9rem;
+}
+
+main .div-detalle-info {
+  margin-top: 4rem;
 }
 
 footer {

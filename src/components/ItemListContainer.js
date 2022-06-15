@@ -9,32 +9,27 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
 
-        customFetch(3000, productos)
-        .then(r => setElemento(r))
+        customFetch(2000, productos)
+        .then(r => setElemento(r)) //r===productos porque el parámetro del resolve(), si no hay error en la promesa, pasa directamente como parámetro al then
 
     }, [elementos])
 
     if(elementos.length > 0){
 
         return(
-            <>
             <section className="catalogo">
-            <h2>Productos</h2>
-            <div className={props.clase}>
-                <ItemList items={elementos}/>
-            </div>
+                <h2>Productos</h2>
+                <div className={props.clase}>
+                    <ItemList items={elementos}/>
+                </div>
             </section>
-            </>
         );
 
     }
     else{
         return(
-            <>
             
             <h3>Cargando...</h3>
-
-            </>
 
         )
     }
