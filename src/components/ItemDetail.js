@@ -5,10 +5,10 @@ const ItemDetail = ({ producto }) => {
   return (
     <div className="div-detalle">
         <div>
-            <img src={producto.image} alt={producto.tittle} />
+            <img src={producto.image} alt={producto.title} />
         </div>
         <div className='div-detalle-info'>
-            <h4>{producto.tittle}</h4>
+            <h4>{producto.title}</h4>
             <p>{producto.description}</p>
             <p>Stock disponible: {producto.stock}</p>
             <p>Precio: ${producto.price}</p>

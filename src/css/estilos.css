@@ -16,11 +16,11 @@ body {
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  -ms-grid-columns: 55% 40% 5%;
+      grid-template-columns: 55% 40% 5%;
   background-color: black;
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -33,23 +33,21 @@ header a {
 
 header a h2 {
   color: white;
-  line-height: 3px;
   text-transform: uppercase;
 }
 
 header nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
-  text-align: center;
+  place-content: center;
+  color: white;
 }
 
 header nav ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   list-style: none;
 }
 
@@ -60,12 +58,12 @@ header nav ul li a {
   color: white;
 }
 
-header nav button {
+header button {
   background-color: black;
   color: white;
 }
 
-header nav button i {
+header button i {
   font-size: 2rem;
 }
 
@@ -126,10 +124,17 @@ main .catalogo .productos .div-producto {
   border: solid 1.5px black;
   border-radius: 5px;
   min-width: 9.4rem;
-  min-height: 180px;
+  min-height: 340px;
+  -webkit-box-shadow: 1px 1px 4px #000003;
+          box-shadow: 1px 1px 4px #000003;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 main .catalogo .productos .div-producto h4 {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   background-color: #F0F1F2;
   padding-top: 5px;
   font-weight: normal;
@@ -141,14 +146,14 @@ main .catalogo .productos .div-producto .tittle-prod {
   border-bottom: solid 1px #EAEBEC;
   border-top: none;
   margin-bottom: 10px;
+  font-weight: bold;
+  padding: .5rem;
 }
 
 main .catalogo .productos .div-producto img {
   height: 120px;
   width: 70%;
   margin-left: 15%;
-  -o-object-fit: cover;
-     object-fit: cover;
   border-radius: 5px;
 }
 
@@ -156,13 +161,26 @@ main .catalogo .productos .div-producto p {
   margin-top: .6rem;
 }
 
-main .catalogo .productos .div-producto button {
+main .catalogo .productos .div-producto .boton-ver-detalle {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   border: solid 1px #6CECEC;
   background-color: #D3D3D3;
+  color: black;
+  text-decoration: none;
   margin: .8rem;
-  padding: 3px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+main .catalogo .productos .div-producto .boton-ver-detalle:hover {
   font-weight: bold;
-  font-size: .6rem;
+}
+
+main .catalogo .productos .div-producto:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 main .div-detalle {
@@ -173,7 +191,7 @@ main .div-detalle {
   place-content: center;
   text-align: center;
   margin: 2rem;
-  border: solid 2px black;
+  border: solid 1px black;
   border-radius: 10px;
   padding: .5rem;
 }
@@ -196,7 +214,6 @@ main .div-detalle .div-contador-container .div-contador {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-area: c;
       grid-template-areas: "restar contador sumar";
   text-align: center;
   border: solid 1px black;
@@ -224,7 +241,7 @@ main .div-detalle .div-contador-container .div-contador .sumar {
 
 main .div-detalle .vaciar-container {
   text-align: center;
-  margin: 0rem 1rem;
+  margin-bottom: .5rem;
 }
 
 main .div-detalle .vaciar-container .vaciar {
@@ -240,6 +257,10 @@ main .div-detalle .vaciar-container .vaciar {
 
 main .div-detalle-info {
   margin-top: 4rem;
+}
+
+main .div-detalle-info p {
+  margin: 1rem;
 }
 
 footer {

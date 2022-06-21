@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import {prod} from '../utils/productos';
-import customFetch from '../utils/customFetch';
+import {getProductById} from '../utils/customFetch';
+import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
   
-  const [item, setItem] = useState({})
+  const [item, setItem] = useState({});
+  const {id} = useParams();
 
   useEffect(() => {
 
-    customFetch(2000, prod)
-    .then(r => setItem(r))
+    getProductById(parseInt(id))
+    .then(res => setItem(res))
 
-  })
+  },[])
   
   if(item !== {}){
-  return (
-      <>
+    return (
+      <>      
         <ItemDetail producto={item}/>
       </>
-    )
+      )
   }
   else{
     return (
-      <>
-
-      </>
+      <h3>cargando...</h3>
     )
   }
 }
