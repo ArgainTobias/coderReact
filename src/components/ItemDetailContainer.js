@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     getProductById(parseInt(id))
     .then(res => setItem(res))
 
-  },[])
+  },[id])
   
   if(item !== {}){
     return (

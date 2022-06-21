@@ -22,7 +22,7 @@ header{
     a{
         margin-top: .5rem;
         text-decoration: none;
-        width: 25%;
+        width: 30%;
         height: 100%;
         h2{
             color: white;
@@ -52,7 +52,7 @@ header{
         background-color: black;
         color: white;
         i{
-            font-size: 2rem;
+            font-size: 2.8rem;
         }
     }
 }
@@ -151,7 +151,7 @@ main{
                     margin-top: .6rem;
                 }
     
-                .boton-ver-detalle{
+                a{
 
                     display: grid;
                     place-content: center;
@@ -164,7 +164,7 @@ main{
                     font-size: 1rem;
                 }
 
-                .boton-ver-detalle:hover{
+                a:hover{
                     font-weight: bold;
                 }
     

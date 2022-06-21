@@ -37,7 +37,7 @@ const ItemCount = ({stock, initial}) => {
             </div>
         </div>
         <div className="vaciar-container">
-            <button className="vaciar" onClick={confirmar}>Agregar al carrito</button>
+            <button className="vaciar" onClick={confirmar}>Add to cart</button>
         </div>
         </>
     );

@@ -16,7 +16,7 @@ const ItemListContainer = (props) => {
 
         if(!category){
 
-            customFetch(0, productos)
+            customFetch(productos)
             .then(r => {
                 setElemento(r)
             }); //r===productos porque el parámetro del resolve(), si no hay error en la promesa, pasa directamente como parámetro al then
@@ -30,13 +30,14 @@ const ItemListContainer = (props) => {
             
         }
 
-    }, [elementos])
+    }, [category])
 
     if(elementos.length > 0){
 
         return(
             <section className="catalogo">
-                <h2>Productos</h2>
+                {category ? "" : <h1>Home</h1>}
+                <h2>Products</h2>
                 <div className={props.clase}>
                     <ItemList items={elementos}/>
                 </div>

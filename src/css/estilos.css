@@ -27,7 +27,7 @@ header {
 header a {
   margin-top: .5rem;
   text-decoration: none;
-  width: 25%;
+  width: 30%;
   height: 100%;
 }
 
@@ -64,7 +64,7 @@ header button {
 }
 
 header button i {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 main {
@@ -161,7 +161,7 @@ main .catalogo .productos .div-producto p {
   margin-top: .6rem;
 }
 
-main .catalogo .productos .div-producto .boton-ver-detalle {
+main .catalogo .productos .div-producto a {
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -174,7 +174,7 @@ main .catalogo .productos .div-producto .boton-ver-detalle {
   font-size: 1rem;
 }
 
-main .catalogo .productos .div-producto .boton-ver-detalle:hover {
+main .catalogo .productos .div-producto a:hover {
   font-weight: bold;
 }
 

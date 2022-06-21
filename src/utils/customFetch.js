@@ -1,14 +1,11 @@
 import {productos} from "./productos";
 
-export const customFetch = (time, task) => {
+export const customFetch = (task) => {
 
     return new Promise ((resolve) => {
 
-        setTimeout(() => {
 
-            resolve(task);
-
-        }, time);
+        resolve(task);
 
     });
 
