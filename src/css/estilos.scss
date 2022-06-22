@@ -6,6 +6,11 @@
 
 body{
     overflow-x: hidden;
+    font-family: 'Joan', serif;
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #root{
@@ -16,23 +21,27 @@ header{
     display: grid;
     place-content: center;
     grid-template-columns: 55% 40% 5%;
-    background-color: black;
+    // background-color: #D3D3D3;
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 2rem;
     margin-bottom: 2rem;
+    border-bottom: solid 2px black;
     a{
         margin-top: .5rem;
         text-decoration: none;
         width: 30%;
         height: 100%;
         h2{
-            color: white;
+            color: black;
             text-transform: uppercase;
         }
     }
     nav{
         display: grid;
         place-content: center;
-        color: white;
+        color: black;
         ul{
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -42,15 +51,16 @@ header{
                     padding: 1rem;
                     text-decoration: none;
                     font-size: 1.4rem;
-                    color: white;
+                    color: black;
                 }
             }
         }
     }
 
     button{
-        background-color: black;
-        color: white;
+        background: linear-gradient(to left, #D3CFC9, #CBC8C3);
+        color: black;
+        border: #CBC8C3;
         i{
             font-size: 2.8rem;
         }
@@ -115,11 +125,12 @@ main{
                 border: solid 1.5px black;
                 border-radius: 5px;
                 min-width: 9.4rem;
-                min-height: 340px;
+                min-height: 380px;
                 box-shadow: 1px 1px 4px rgb(0, 0, 3);
                 transition: all 0.3s ease;
+                background-color: white;
                 
-    
+
                 h4{
                     display: grid;
                     place-content: center;
@@ -140,10 +151,10 @@ main{
                 }
     
                 img{
-                    height: 120px;
+                    height: 160px;
                     width: 70%;
                     margin-left: 15%;
-                    // object-fit: cover;
+                    object-fit: cover;
                     border-radius: 5px;
                 }
     
@@ -162,6 +173,7 @@ main{
                     margin: .8rem;
                     padding: 8px;
                     font-size: 1rem;
+                    border-radius: 5px;
                 }
 
                 a:hover{
@@ -187,6 +199,7 @@ main{
         text-align: center;
         margin: 2rem;
         border: solid 1px black;
+        box-shadow: 1px 1px 4px rgb(0, 0, 3);
         border-radius: 10px;
         padding: .5rem;
 
@@ -260,12 +273,16 @@ footer{
     margin-top: 2rem;
     padding: 2rem .5rem;
     padding-bottom: 1rem;
-    background-color: black;
+    // background-color: #D3D3D3;
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 5rem;
+    border-top: solid 2px black;
     p{
         font-size: 1.2rem;
         text-align: center;
-        color: white;
+        color: black;
         margin-top: 1.5rem;
         // padding-top: 1rem;
     }
@@ -278,11 +295,12 @@ footer{
             text-align: center;
 
             li{
+                list-style: none;
                 a{
                     padding: 1rem;
                     text-decoration: none;
                     font-size: 1.4rem;
-                    color: white;
+                    color: black;
                 }
             }
         }

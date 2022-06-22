@@ -7,6 +7,13 @@
 
 body {
   overflow-x: hidden;
+  font-family: 'Joan', serif;
+  background: #304352;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#d7d2cc), to(#304352));
+  background: linear-gradient(to left, #d7d2cc, #304352);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #root {
@@ -19,9 +26,15 @@ header {
   place-content: center;
   -ms-grid-columns: 55% 40% 5%;
       grid-template-columns: 55% 40% 5%;
-  background-color: black;
+  background: #304352;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#d7d2cc), to(#304352));
+  background: linear-gradient(to left, #d7d2cc, #304352);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 2rem;
   margin-bottom: 2rem;
+  border-bottom: solid 2px black;
 }
 
 header a {
@@ -32,7 +45,7 @@ header a {
 }
 
 header a h2 {
-  color: white;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -40,7 +53,7 @@ header nav {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  color: white;
+  color: black;
 }
 
 header nav ul {
@@ -55,12 +68,14 @@ header nav ul li a {
   padding: 1rem;
   text-decoration: none;
   font-size: 1.4rem;
-  color: white;
+  color: black;
 }
 
 header button {
-  background-color: black;
-  color: white;
+  background: -webkit-gradient(linear, right top, left top, from(#D3CFC9), to(#CBC8C3));
+  background: linear-gradient(to left, #D3CFC9, #CBC8C3);
+  color: black;
+  border: #CBC8C3;
 }
 
 header button i {
@@ -124,11 +139,12 @@ main .catalogo .productos .div-producto {
   border: solid 1.5px black;
   border-radius: 5px;
   min-width: 9.4rem;
-  min-height: 340px;
+  min-height: 380px;
   -webkit-box-shadow: 1px 1px 4px #000003;
           box-shadow: 1px 1px 4px #000003;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: white;
 }
 
 main .catalogo .productos .div-producto h4 {
@@ -151,9 +167,11 @@ main .catalogo .productos .div-producto .tittle-prod {
 }
 
 main .catalogo .productos .div-producto img {
-  height: 120px;
+  height: 160px;
   width: 70%;
   margin-left: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 
@@ -172,6 +190,7 @@ main .catalogo .productos .div-producto a {
   margin: .8rem;
   padding: 8px;
   font-size: 1rem;
+  border-radius: 5px;
 }
 
 main .catalogo .productos .div-producto a:hover {
@@ -192,6 +211,8 @@ main .div-detalle {
   text-align: center;
   margin: 2rem;
   border: solid 1px black;
+  -webkit-box-shadow: 1px 1px 4px #000003;
+          box-shadow: 1px 1px 4px #000003;
   border-radius: 10px;
   padding: .5rem;
 }
@@ -271,14 +292,20 @@ footer {
   margin-top: 2rem;
   padding: 2rem .5rem;
   padding-bottom: 1rem;
-  background-color: black;
+  background: #304352;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#d7d2cc), to(#304352));
+  background: linear-gradient(to left, #d7d2cc, #304352);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 5rem;
+  border-top: solid 2px black;
 }
 
 footer p {
   font-size: 1.2rem;
   text-align: center;
-  color: white;
+  color: black;
   margin-top: 1.5rem;
 }
 
@@ -295,10 +322,14 @@ footer nav ul {
   text-align: center;
 }
 
+footer nav ul li {
+  list-style: none;
+}
+
 footer nav ul li a {
   padding: 1rem;
   text-decoration: none;
   font-size: 1.4rem;
-  color: white;
+  color: black;
 }
 /*# sourceMappingURL=estilos.css.map */

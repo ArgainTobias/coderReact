@@ -283,7 +283,7 @@ pedido.catch()
 
 
 
-//1) Hago el pediddo con Fecth : Como va a tardar me da una promesa, por eso el .then / .catch
+//1) Hago el pedidod con Fecth : Como va a tardar me da una promesa, por eso el .then / .catch
 fetch("https://fakestoreapi.com/products")
 .then((respuesta)=>{
     //2) Obtenemos y validamos la respuesta del servidor
