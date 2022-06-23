@@ -24,6 +24,7 @@ header{
     grid-template-columns: 55% 40% 5%;
     // background-color: #D3D3D3;  
     padding: 2rem;
+    padding-top: 1rem;
     margin-bottom: 2rem;
     border-bottom: solid 2px black;
     a{
@@ -31,14 +32,14 @@ header{
         text-decoration: none;
         width: 30%;
         height: 100%;
+        display: grid;
+        place-content: center;
         h2{
             color: black;
             text-transform: uppercase;
         }
     }
     nav{
-        display: grid;
-        place-content: center;
         color: black;
         ul{
             display: grid;
@@ -46,10 +47,16 @@ header{
             list-style: none;
             li{
                 a{
+                    display: grid;
+                    place-content: center;
                     padding: 1rem;
                     text-decoration: none;
                     font-size: 1.4rem;
                     color: black;
+                }
+
+                .active{
+                    color:gray
                 }
             }
         }
@@ -59,6 +66,7 @@ header{
         background: linear-gradient(to left, #EBF0F1, #E7ECEE);
         color: black;
         border: #CBC8C3;
+        
         i{
             font-size: 2.8rem;
         }

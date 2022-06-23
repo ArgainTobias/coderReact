@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
     return(
         <header>
-            <NavLink to={"/"}><h2>Argain Shopp</h2></NavLink>
+            <NavLink to={"/"}><h2>Argain Shop</h2></NavLink>
             <NavBar inHeader={true}/>
             <CartWidget/>
         </header>

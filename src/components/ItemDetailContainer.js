@@ -7,16 +7,22 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
   
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
   const {id} = useParams();
 
   useEffect(() => {
 
+    setLoading(true)
+
     getProductById(parseInt(id))
-    .then(res => setItem(res))
+    .then(res => {
+      setItem(res)
+      setLoading(false)
+    })
 
   },[id])
   
-  if(item !== {}){
+  if(!loading){
     return (
       <>      
         <ItemDetail producto={item}/>
@@ -25,7 +31,7 @@ const ItemDetailContainer = () => {
   }
   else{
     return (
-      <h3>cargando...</h3>
+      <h3>Cargando...</h3>
     )
   }
 }

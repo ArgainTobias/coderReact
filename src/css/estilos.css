@@ -27,6 +27,7 @@ header {
   -ms-grid-columns: 55% 40% 5%;
       grid-template-columns: 55% 40% 5%;
   padding: 2rem;
+  padding-top: 1rem;
   margin-bottom: 2rem;
   border-bottom: solid 2px black;
 }
@@ -36,6 +37,9 @@ header a {
   text-decoration: none;
   width: 30%;
   height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 header a h2 {
@@ -44,9 +48,6 @@ header a h2 {
 }
 
 header nav {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
   color: black;
 }
 
@@ -59,10 +60,17 @@ header nav ul {
 }
 
 header nav ul li a {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   padding: 1rem;
   text-decoration: none;
   font-size: 1.4rem;
   color: black;
+}
+
+header nav ul li .active {
+  color: gray;
 }
 
 header button {

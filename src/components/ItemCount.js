@@ -21,6 +21,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
         onAdd(contador)
 
+        contador !== 0 ? alert("Se ha confirmado su pedido") : alert("No ha seleccionado una cantidad válida de productos")
+
     }
 
     return(

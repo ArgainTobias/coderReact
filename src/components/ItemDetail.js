@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ producto }) => {
 
-    const [desaparecer, setDesaparecer] = useState();
+    const [desaparecer, setDesaparecer] = useState(0);
 
     const onAdd = (cantidadSeleccionada) => {
 
