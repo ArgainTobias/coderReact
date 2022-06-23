@@ -8,11 +8,11 @@
 body {
   overflow-x: hidden;
   font-family: 'Joan', serif;
-  background: #304352;
+  background: #8e9eab;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#d7d2cc), to(#304352));
-  background: linear-gradient(to left, #d7d2cc, #304352);
+  background: -webkit-gradient(linear, right top, left top, from(#eef2f3), to(#8e9eab));
+  background: linear-gradient(to left, #eef2f3, #8e9eab);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -26,12 +26,6 @@ header {
   place-content: center;
   -ms-grid-columns: 55% 40% 5%;
       grid-template-columns: 55% 40% 5%;
-  background: #304352;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#d7d2cc), to(#304352));
-  background: linear-gradient(to left, #d7d2cc, #304352);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 2rem;
   margin-bottom: 2rem;
   border-bottom: solid 2px black;
@@ -72,8 +66,8 @@ header nav ul li a {
 }
 
 header button {
-  background: -webkit-gradient(linear, right top, left top, from(#D3CFC9), to(#CBC8C3));
-  background: linear-gradient(to left, #D3CFC9, #CBC8C3);
+  background: -webkit-gradient(linear, right top, left top, from(#EBF0F1), to(#E7ECEE));
+  background: linear-gradient(to left, #EBF0F1, #E7ECEE);
   color: black;
   border: #CBC8C3;
 }
@@ -139,7 +133,7 @@ main .catalogo .productos .div-producto {
   border: solid 1.5px black;
   border-radius: 5px;
   min-width: 9.4rem;
-  min-height: 380px;
+  min-height: 350px;
   -webkit-box-shadow: 1px 1px 4px #000003;
           box-shadow: 1px 1px 4px #000003;
   -webkit-transition: all 0.3s ease;
@@ -168,8 +162,6 @@ main .catalogo .productos .div-producto .tittle-prod {
 
 main .catalogo .productos .div-producto img {
   height: 160px;
-  width: 70%;
-  margin-left: 15%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -215,11 +207,14 @@ main .div-detalle {
           box-shadow: 1px 1px 4px #000003;
   border-radius: 10px;
   padding: .5rem;
+  background-color: white;
 }
 
 main .div-detalle img {
   border-radius: 10px;
   height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .div-detalle .div-contador-container {
@@ -292,12 +287,6 @@ footer {
   margin-top: 2rem;
   padding: 2rem .5rem;
   padding-bottom: 1rem;
-  background: #304352;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#d7d2cc), to(#304352));
-  background: linear-gradient(to left, #d7d2cc, #304352);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 5rem;
   border-top: solid 2px black;
 }

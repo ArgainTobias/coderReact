@@ -37,7 +37,7 @@ const ItemListContainer = (props) => {
         return(
             <section className="catalogo">
                 {category ? "" : <h1>Home</h1>}
-                <h2>Products</h2>
+                <h2>Our Products</h2>
                 <div className={props.clase}>
                     <ItemList items={elementos}/>
                 </div>
