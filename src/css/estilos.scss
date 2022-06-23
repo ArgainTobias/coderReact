@@ -239,21 +239,23 @@ main{
             }        
         }
 
-        .vaciar-container{
+        .confirmar-container{
 
             text-align: center;
             margin-bottom: .5rem;
+        }
 
-            .vaciar{
-                grid-area: confirmar;
-                text-align: center;
-                padding: .2rem;
-                border-radius: 5px;
-                border: solid 1px black;
-                font-size: .8rem;
-                background-color: #EFEFEF;
-                width: 9rem;
-            }
+        .confirmar{
+            grid-area: confirmar;
+            text-align: center;
+            padding: .2rem;
+            border-radius: 5px;
+            border: solid 1px black;
+            font-size: .8rem;
+            background-color: #EFEFEF;
+            width: 9rem;
+            text-decoration: none;
+            color: black;
         }
     }
 
@@ -301,4 +303,11 @@ footer{
             }
         }
     }
+}
+
+.carrito{
+
+    text-align: center;
+    font-size: 4rem;
+
 }

@@ -1,8 +1,8 @@
 import {useState} from "react";
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [contador,cambiarContador] = useState(initial);
+    const [contador, cambiarContador] = useState(initial);
 
     const aumentarContador = () => {
         if(contador < stock){
@@ -19,12 +19,8 @@ const ItemCount = ({stock, initial}) => {
 
     const confirmar = () => {
 
-        if(contador <= stock && contador > 0){
-            alert("Producto agregado correctamente");
-        }
-        else{
-            alert("Debe agregar una cantidad valida de productos para poder agregar al carrito");
-        }
+        onAdd(contador)
+
     }
 
     return(
@@ -36,8 +32,8 @@ const ItemCount = ({stock, initial}) => {
                 <button className="sumar material-symbols-outlined" onClick={aumentarContador}>add</button>
             </div>
         </div>
-        <div className="vaciar-container">
-            <button className="vaciar" onClick={confirmar}>Add to cart</button>
+        <div className="confirmar-container">
+            <button className="confirmar" onClick={confirmar}>Confirm</button>
         </div>
         </>
     );

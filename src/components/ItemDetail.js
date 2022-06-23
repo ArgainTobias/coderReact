@@ -1,7 +1,19 @@
 import React from 'react';
 import ItemCount from './ItemCount';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ producto }) => {
+
+    const [desaparecer, setDesaparecer] = useState();
+
+    const onAdd = (cantidadSeleccionada) => {
+
+        setDesaparecer(cantidadSeleccionada);
+
+    }
+
+
   return (
     <div className="div-detalle">
         <div>
@@ -12,7 +24,7 @@ const ItemDetail = ({ producto }) => {
             <p>{producto.description}</p>
             <p>Stock available: {producto.stock}</p>
             <p>Price: ${producto.price}</p>
-            <ItemCount stock={producto.stock} initial={1}/>
+            {desaparecer ? <Link to={"/cart"} className="confirmar">Terminar mi compra</Link> : <ItemCount stock={producto.stock} initial={1} onAdd={onAdd}/>}
         </div>
     </div>
     )

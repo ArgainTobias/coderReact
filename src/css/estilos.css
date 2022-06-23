@@ -255,12 +255,12 @@ main .div-detalle .div-contador-container .div-contador .sumar {
   border: none;
 }
 
-main .div-detalle .vaciar-container {
+main .div-detalle .confirmar-container {
   text-align: center;
   margin-bottom: .5rem;
 }
 
-main .div-detalle .vaciar-container .vaciar {
+main .div-detalle .confirmar {
   grid-area: confirmar;
   text-align: center;
   padding: .2rem;
@@ -269,6 +269,8 @@ main .div-detalle .vaciar-container .vaciar {
   font-size: .8rem;
   background-color: #EFEFEF;
   width: 9rem;
+  text-decoration: none;
+  color: black;
 }
 
 main .div-detalle-info {
@@ -320,5 +322,10 @@ footer nav ul li a {
   text-decoration: none;
   font-size: 1.4rem;
   color: black;
+}
+
+.carrito {
+  text-align: center;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=estilos.css.map */
