@@ -29,13 +29,10 @@ export const CartContext = ({children}) => {
 
             let producto = productos.find((prod) => prod.id === prodId);
 
-            if(cantidad > 1){
-
-                producto.quantity += cantidad-1;
-
-            };
-
-            copiaCarrito.push(producto);
+            copiaCarrito.push({
+                ...producto,
+                quantity : cantidad,
+            });
 
             setCarrito(copiaCarrito);
             setCantidadTotal(cantidadTotal + cantidad);
