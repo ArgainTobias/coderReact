@@ -78,8 +78,7 @@ export const CartContext = ({children}) => {
 
     const vaciarCarrito = () => {
 
-        copiaCarrito.length = 0;
-        setCarrito(copiaCarrito);
+        setCarrito([]);
 
         setCantidadTotal(cantidadTotal - cantidadTotal);
 
