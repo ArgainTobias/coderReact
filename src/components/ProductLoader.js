@@ -14,7 +14,8 @@ export const SkeletonCard = () => {
 
 export const ProductLoader = () => {
     return (
-      <section className='productos'>
+      <section className='loader'>
+        <SkeletonCard />
         <SkeletonCard />
         <SkeletonCard />
         <SkeletonCard />

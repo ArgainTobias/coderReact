@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import {getProductById} from '../utils/customFetch';
 import { useParams } from 'react-router-dom';
+import { ProductLoader } from './ProductLoader';
 
 
 const ItemDetailContainer = () => {
@@ -31,7 +32,7 @@ const ItemDetailContainer = () => {
   }
   else{
     return (
-      <h3>Cargando...</h3>
+      <ProductLoader/>
     )
   }
 }

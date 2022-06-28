@@ -1,8 +1,10 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
+import { contexto } from "./CartContext";
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
     const [contador, cambiarContador] = useState(initial);
+    const resultadoContext = useContext(contexto)
 
     const aumentarContador = () => {
         if(contador < stock){
@@ -17,11 +19,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
-    const confirmar = () => {
+    const confirmar = (prodId) => {
 
         onAdd(contador)
-
         contador !== 0 ? alert("Se ha confirmado su pedido") : alert("No ha seleccionado una cantidad válida de productos")
+        resultadoContext.agregarProducto(prodId, contador)
 
     }
 

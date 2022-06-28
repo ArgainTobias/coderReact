@@ -1,6 +1,14 @@
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { contexto } from "./CartContext";
+
 const CartWidget = () => {
+
+  const resultadoContext = useContext(contexto);
+
+
   return (
-    <button className="material-symbols-outlined"> <i>shopping_cart</i> </button>
+    <NavLink className="icono-carrito material-symbols-outlined" to={"/cart"}> <i>shopping_cart</i> <p>{resultadoContext.cantidadTotal}</p></NavLink>
   )
 };
 
