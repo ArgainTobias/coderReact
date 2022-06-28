@@ -10,7 +10,8 @@ export const productos = [
         "rate": 3.9,
         "count": 120
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 2,
@@ -23,7 +24,8 @@ export const productos = [
         "rate": 4.1,
         "count": 259
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 3,
@@ -36,7 +38,8 @@ export const productos = [
         "rate": 4.7,
         "count": 500
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 4,
@@ -49,7 +52,8 @@ export const productos = [
         "rate": 2.1,
         "count": 430
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 5,
@@ -62,7 +66,8 @@ export const productos = [
         "rate": 4.6,
         "count": 400
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 6,
@@ -75,7 +80,8 @@ export const productos = [
         "rate": 3.9,
         "count": 70
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 7,
@@ -88,7 +94,8 @@ export const productos = [
         "rate": 3,
         "count": 400
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 8,
@@ -101,7 +108,8 @@ export const productos = [
         "rate": 1.9,
         "count": 100
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 9,
@@ -114,7 +122,8 @@ export const productos = [
         "rate": 3.3,
         "count": 203
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 10,
@@ -127,7 +136,8 @@ export const productos = [
         "rate": 2.9,
         "count": 470
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 11,
@@ -140,7 +150,8 @@ export const productos = [
         "rate": 4.8,
         "count": 319
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 12,
@@ -153,7 +164,8 @@ export const productos = [
         "rate": 4.8,
         "count": 400
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 13,
@@ -166,7 +178,8 @@ export const productos = [
         "rate": 2.9,
         "count": 250
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 14,
@@ -179,7 +192,8 @@ export const productos = [
         "rate": 2.2,
         "count": 140
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 15,
@@ -192,7 +206,8 @@ export const productos = [
         "rate": 2.6,
         "count": 235
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 16,
@@ -205,7 +220,8 @@ export const productos = [
         "rate": 2.9,
         "count": 340
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 17,
@@ -218,7 +234,8 @@ export const productos = [
         "rate": 3.8,
         "count": 679
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 18,
@@ -231,7 +248,8 @@ export const productos = [
         "rate": 4.7,
         "count": 130
       },
-      "stock":10
+      "stock":10,
+      "quantity":1
     },
     {
       "id": 19,
@@ -244,7 +262,8 @@ export const productos = [
         "rate": 4.5,
         "count": 146
         },
-        "stock":10
+        "stock":10,
+        "quantity":1
     },
     {
       "id": 20,
@@ -257,6 +276,7 @@ export const productos = [
         "rate": 3.6,
         "count": 145
         },
-        "stock":10
+        "stock":10,
+        "quantity":1
     }
 ]

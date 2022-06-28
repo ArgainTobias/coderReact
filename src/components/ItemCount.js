@@ -21,9 +21,10 @@ const ItemCount = ({stock, initial, onAdd, id}) => {
 
     const confirmar = () => {
 
-        onAdd(contador)
-        contador !== 0 ? alert("Se ha confirmado su pedido") : alert("No ha seleccionado una cantidad válida de productos")
-        resultadoContext.agregarProducto(id, contador)
+        onAdd(contador);
+        
+        contador ? resultadoContext.agregarProducto(id, contador) : alert("No ha seleccionado una cantidad válida de productos");
+
 
     }
 

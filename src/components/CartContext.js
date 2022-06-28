@@ -14,22 +14,32 @@ export const CartContext = ({children}) => {
     const [precioTotal, setPrecioTotal] = useState();
 
 
-    let isInCart = (id) => carrito.some((prod) => prod.id === id)
+
+    const isInCart = (id) => carrito.some((prod) => prod.id === id)
           
 
     const agregarProducto = (prodId, cantidad) => {
 
         let estaId = isInCart(prodId); 
-        console.log(estaId); 
+        let copiaCarrito = carrito.slice()
         
         if(!estaId){
 
+            alert("Se hace confirmado su pedido");
+
             let producto = productos.find((prod) => prod.id === prodId);
-            console.log(producto);
-            
-            setCarrito(producto);
+
+            if(cantidad > 1){
+
+                producto.quantity += cantidad-1;
+
+            };
+
+            copiaCarrito.push(producto);
+
+            setCarrito(copiaCarrito);
             setCantidadTotal(cantidadTotal + cantidad);
-            console.log(carrito);
+            
 
         }
         else{
