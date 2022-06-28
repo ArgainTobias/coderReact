@@ -8,11 +8,12 @@ const Provider = contexto.Provider;
 //Provider : Es un componente que viene adentro de un contexto y sirve para : 1) Determina quienes tienen acceso a la informacion y 2) Determina el valor del contexto
 
 export const CartContext = ({children}) => {
-
+    
     const [carrito, setCarrito] = useState([]);
     const [cantidadTotal, setCantidadTotal] = useState(0);
     const [precioTotal, setPrecioTotal] = useState();
-
+    
+    let copiaCarrito = carrito.slice()
 
 
     const isInCart = (id) => carrito.some((prod) => prod.id === id)
@@ -21,7 +22,6 @@ export const CartContext = ({children}) => {
     const agregarProducto = (prodId, cantidad) => {
 
         let estaId = isInCart(prodId); 
-        let copiaCarrito = carrito.slice()
         
         if(!estaId){
 
@@ -56,12 +56,16 @@ export const CartContext = ({children}) => {
 
         if(estaId){
 
-            let producto = carrito.find((prod) => prod.id === prodId);
+            
+            let producto = copiaCarrito.find((prod) => prod.id === prodId);
+            
+            const indice = copiaCarrito.indexOf(producto);
 
-            const indice = carrito.indexOf(producto);
-
-            carrito.splice(indice,1);
-            setCantidadTotal(cantidadTotal - 1);
+            copiaCarrito.splice(indice,1);
+            setCarrito(copiaCarrito);
+            setCantidadTotal(cantidadTotal - producto.quantity);
+            
+            alert("El producto ha sido eliminado correctamente");
 
         }
         else{
@@ -72,6 +76,15 @@ export const CartContext = ({children}) => {
 
     }
 
+    const vaciarCarrito = () => {
+
+        copiaCarrito.length = 0;
+        setCarrito(copiaCarrito);
+
+        setCantidadTotal(cantidadTotal - cantidadTotal);
+
+    }
+
     const valorDelContexto = {
 
         carrito : carrito,
@@ -79,6 +92,7 @@ export const CartContext = ({children}) => {
         precioTotal : precioTotal,
         agregarProducto : agregarProducto,
         eliminarProducto : eliminarProducto,
+        vaciarCarrito : vaciarCarrito,
         
     }
 

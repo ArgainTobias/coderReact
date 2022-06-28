@@ -1,4 +1,4 @@
-import {useContext, useState, useParams} from "react";
+import {useContext, useState} from "react";
 import { contexto } from "./CartContext";
 
 const ItemCount = ({stock, initial, onAdd, id}) => {
@@ -28,20 +28,42 @@ const ItemCount = ({stock, initial, onAdd, id}) => {
 
     }
 
-    return(
-        <>
-        <div className="div-contador-container">
-            <div className="div-contador">
-                <button className="restar material-symbols-outlined" onClick={disminuirContador}>close</button> 
-                <span>{contador}</span> 
-                <button className="sumar material-symbols-outlined" onClick={aumentarContador}>add</button>
+    const eliminar = () => {
+
+        resultadoContext.eliminarProducto(id)
+
+    }
+
+    if(resultadoContext.carrito.some((prod) => prod.id === id)){
+
+        return(
+            
+            <div>
+                <button className="eliminar" onClick={eliminar}>Remove product</button>
             </div>
-        </div>
-        <div className="confirmar-container">
-            <button className="confirmar" onClick={confirmar}>Confirm</button>
-        </div>
-        </>
-    );
+
+        );    
+
+    }
+    else{
+
+        return(
+            <>
+            <div className="div-contador-container">
+                <div className="div-contador">
+                    <button className="restar material-symbols-outlined" onClick={disminuirContador}>close</button> 
+                    <span>{contador}</span> 
+                    <button className="sumar material-symbols-outlined" onClick={aumentarContador}>add</button>
+                </div>
+            </div>
+            <div className="confirmar-container">
+                <button className="confirmar" onClick={confirmar}>Confirm</button>
+            </div>
+            </>
+        );
+        
+    }
+
 }
 
 

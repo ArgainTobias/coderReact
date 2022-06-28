@@ -273,7 +273,7 @@ main .div-detalle .confirmar-container {
   margin-bottom: .5rem;
 }
 
-main .div-detalle .confirmar {
+main .div-detalle .confirmar, main .div-detalle .eliminar {
   grid-area: confirmar;
   text-align: center;
   padding: .2rem;
@@ -284,6 +284,10 @@ main .div-detalle .confirmar {
   width: 9rem;
   text-decoration: none;
   color: black;
+}
+
+main .div-detalle .eliminar {
+  background-color: #fc1717;
 }
 
 main .div-detalle-info {
@@ -352,8 +356,15 @@ footer nav ul li a {
   color: black;
 }
 
-.carrito {
-  text-align: center;
-  font-size: 4rem;
+.div-carrito h2 {
+  margin: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.div-carrito .vaciarCarrito {
+  margin: 2rem;
+  padding: .5rem;
+  border: solid 1px black;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=estilos.css.map */

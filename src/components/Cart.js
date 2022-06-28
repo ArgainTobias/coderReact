@@ -1,13 +1,10 @@
-import React, { useContext } from 'react'
-import { contexto } from './CartContext'
+import React from 'react'
 
-const Cart = () => {
-
-  const resultadoContext = useContext(contexto)
+const Cart = ({title, price, quantity, image}) => {
 
   return (
-    <div className='carrito'>
-      <h2>Carrito</h2>
+    <div className='div-producto-carrito'>
+      <p>{title} - {price} - {quantity}</p>
     </div>
   )
 }

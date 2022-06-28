@@ -7,7 +7,7 @@ const ItemList = ({items}) => {
         items.map(i => 
             <Item 
                 id={i.id}
-                tittle={i.title}
+                title={i.title}
                 description={i.description}
                 price={i.price}
                 stock={i.stock}

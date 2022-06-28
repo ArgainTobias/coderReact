@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const Item = ({ tittle, price, image, id}) => {
+const Item = ({ title, price, image, id}) => {
 
   return (
       <div className="div-div-producto">  
         <div className="div-producto">
-          <h4 className="tittle-prod">{tittle}</h4>
+          <h4 className="tittle-prod">{title}</h4>
           <div className="div-img">
             <img src={image} alt="" />
           </div>
