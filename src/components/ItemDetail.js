@@ -24,7 +24,7 @@ const ItemDetail = ({ producto }) => {
             <p>{producto.description}</p>
             <p>Stock available: {producto.stock}</p>
             <p>Price: ${producto.price}</p>
-            {desaparecer ? <Link to={"/cart"} className={`confirmar`}>Terminar mi compra</Link> : <ItemCount stock={producto.stock} initial={1} onAdd={onAdd}/>}
+            {desaparecer ? <Link to={"/cart"} className={`confirmar`}>Terminar mi compra</Link> : <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} id={producto.id}/>}
         </div>
     </div>
     )

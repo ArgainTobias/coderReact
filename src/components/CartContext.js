@@ -14,12 +14,13 @@ export const CartContext = ({children}) => {
     const [precioTotal, setPrecioTotal] = useState();
 
 
-    const isInCart = (prodId) => carrito.some((prod) => prod.id === prodId)
+    let isInCart = (id) => carrito.some((prod) => prod.id === id)
           
 
     const agregarProducto = (prodId, cantidad) => {
 
-        const estaId = isInCart(prodId);
+        let estaId = isInCart(prodId); 
+        console.log(estaId); 
         
         if(!estaId){
 
@@ -41,7 +42,7 @@ export const CartContext = ({children}) => {
 
     const eliminarProducto = (prodId) => {
 
-        const estaId = isInCart(prodId);
+        let estaId = isInCart(prodId);
 
         if(estaId){
 
