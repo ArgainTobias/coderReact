@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { productos } from '../utils/productos';
+import swal from 'sweetalert';
 
 
 export const contexto = createContext();
@@ -25,7 +26,10 @@ export const CartContext = ({children}) => {
         
         if(!estaId){
 
-            alert("Se hace confirmado su pedido");
+            swal({
+                title:"Your order has been confirmed",
+                icon:"success"
+            })
 
             let producto = productos.find((prod) => prod.id === prodId);
 
@@ -41,7 +45,10 @@ export const CartContext = ({children}) => {
         }
         else{
 
-            alert("Ya ha seleccionado una cantidad de ese producto");
+            swal({
+                title:"You have already selected a quantity of this product",
+                icon:"error"
+            })
             
         }
 
@@ -62,12 +69,10 @@ export const CartContext = ({children}) => {
             setCarrito(copiaCarrito);
             setCantidadTotal(cantidadTotal - producto.quantity);
             
-            alert("El producto ha sido eliminado correctamente");
-
-        }
-        else{
-
-            alert("Ese producto no está en el carrito");
+            swal({
+                title:"The product has been successfully disposed of",
+                icon:"success"
+            })
 
         }
 
@@ -78,6 +83,11 @@ export const CartContext = ({children}) => {
         setCarrito([]);
 
         setCantidadTotal(cantidadTotal - cantidadTotal);
+
+        swal({
+            title:"Cart has been emptied",
+            icon:"info"
+        })
 
     }
 

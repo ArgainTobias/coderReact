@@ -3,8 +3,9 @@ import Item from "./Item";
 const ItemList = ({items}) => {
 
     return(
-
+        
         items.map(i => 
+        
             <Item 
                 id={i.id}
                 title={i.title}
@@ -14,9 +15,10 @@ const ItemList = ({items}) => {
                 image={i.image}
                 key={i.id}
             />
-        )
 
+        )
     );
+
 };
 
 export default ItemList;

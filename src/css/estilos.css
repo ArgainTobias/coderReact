@@ -20,7 +20,7 @@ body {
   width: 100%;
 }
 
-header {
+.header-con-carrito, .header-sin-carrito {
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -32,7 +32,7 @@ header {
   border-bottom: solid 2px black;
 }
 
-header a {
+.header-con-carrito a, .header-sin-carrito a {
   margin-top: .5rem;
   text-decoration: none;
   width: 30%;
@@ -42,16 +42,16 @@ header a {
   place-content: center;
 }
 
-header a h2 {
+.header-con-carrito a h2, .header-sin-carrito a h2 {
   color: black;
   text-transform: uppercase;
 }
 
-header nav {
+.header-con-carrito nav, .header-sin-carrito nav {
   color: black;
 }
 
-header nav ul {
+.header-con-carrito nav ul, .header-sin-carrito nav ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -59,7 +59,7 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a {
+.header-con-carrito nav ul li a, .header-sin-carrito nav ul li a {
   display: -ms-grid;
   display: grid;
   place-content: center;
@@ -69,11 +69,11 @@ header nav ul li a {
   color: black;
 }
 
-header nav ul li .active {
+.header-con-carrito nav ul li .active, .header-sin-carrito nav ul li .active {
   color: gray;
 }
 
-header .icono-carrito {
+.header-con-carrito .icono-carrito, .header-sin-carrito .icono-carrito {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -85,8 +85,13 @@ header .icono-carrito {
   border: #CBC8C3;
 }
 
-header .icono-carrito i {
+.header-con-carrito .icono-carrito i, .header-sin-carrito .icono-carrito i {
   font-size: 2.8rem;
+}
+
+.header-sin-carrito {
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
 }
 
 main {
@@ -356,15 +361,49 @@ footer nav ul li a {
   color: black;
 }
 
-.div-carrito h2 {
+.div-carrito {
   margin: 1.5rem;
+}
+
+.div-carrito h2 {
   font-size: 2.5rem;
 }
 
-.div-carrito .vaciarCarrito {
+.div-carrito .vaciarCarrito, .div-carrito .div-productos-carrito button {
   margin: 2rem;
   padding: .5rem;
   border: solid 1px black;
   border-radius: 5px;
+}
+
+.div-carrito a {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .5rem;
+  text-decoration: none;
+  color: black;
+  border: solid 1px black;
+  border-radius: 5px;
+  background-color: #8e9eab;
+}
+
+.div-carrito a:hover {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+.div-carrito .div-productos-carrito {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  width: 75%;
+  margin: 1rem 2rem;
+}
+
+.div-carrito .div-productos-carrito button {
+  margin: 0 .5rem;
+  width: 35%;
+  background-color: #fc1717;
 }
 /*# sourceMappingURL=estilos.css.map */
