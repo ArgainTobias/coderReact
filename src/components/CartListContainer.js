@@ -40,7 +40,7 @@ const CartListContainer = () => {
             <div className='div-carrito'>
 
                 <h3>No hay productos en el carrito</h3>
-                <Link to={"/"}>Volver a comprar</Link>
+                <Link className='volver-a-comprar' to={"/"}>Volver a comprar</Link>
 
             </div>
 

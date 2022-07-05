@@ -369,14 +369,14 @@ footer nav ul li a {
   font-size: 2.5rem;
 }
 
-.div-carrito .vaciarCarrito, .div-carrito .div-productos-carrito button {
+.div-carrito .vaciarCarrito {
   margin: 2rem;
   padding: .5rem;
   border: solid 1px black;
   border-radius: 5px;
 }
 
-.div-carrito a {
+.div-carrito .volver-a-comprar, .div-carrito .vaciarCarrito {
   display: inline-block;
   margin: 1rem 0;
   padding: .5rem;
@@ -387,7 +387,7 @@ footer nav ul li a {
   background-color: #8e9eab;
 }
 
-.div-carrito a:hover {
+.div-carrito .volver-a-comprar:hover, .div-carrito .vaciarCarrito:hover {
   background-color: lightblue;
   font-weight: bold;
 }
@@ -401,9 +401,23 @@ footer nav ul li a {
   margin: 1rem 2rem;
 }
 
-.div-carrito .div-productos-carrito button {
+.div-carrito .div-productos-carrito p {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.div-carrito .div-productos-carrito div {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.div-carrito .div-productos-carrito div button {
+  padding: .5rem;
+  border: solid 1px black;
+  border-radius: 5px;
   margin: 0 .5rem;
-  width: 35%;
   background-color: #fc1717;
 }
 /*# sourceMappingURL=estilos.css.map */

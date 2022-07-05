@@ -46,8 +46,10 @@ export const CartContext = ({children}) => {
         else{
 
             swal({
+
                 title:"You have already selected a quantity of this product",
-                icon:"error"
+                icon:"error",
+            
             })
             
         }

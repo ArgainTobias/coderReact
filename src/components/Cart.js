@@ -4,17 +4,20 @@ import { contexto } from './CartContext';
 
 const Cart = ({title, price, quantity, id}) => {
 
-  const resultadoContext = useContext(contexto);
+  const {eliminarProducto} = useContext(contexto);
 
   const eliminar = () => {
 
-    resultadoContext.eliminarProducto(id)
+    eliminarProducto(id);
 
   }
 
   return (
     <div className='div-productos-carrito'>
-      <p>{title} - {price} - {quantity}</p> <button onClick={eliminar}>Remove item</button>
+      <p>{title} - {price} - {quantity}</p> 
+      <div>
+        <button onClick={eliminar}>Remove item</button>
+      </div>
     </div>
   )
 }
