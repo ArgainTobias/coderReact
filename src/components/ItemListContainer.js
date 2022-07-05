@@ -13,6 +13,7 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
 
+    setLoading(true)
     //1) Necesito la referencia de la coleccion
     const ref = category ? query(collectionProd, where("category", "==", category)) : collectionProd;
 
@@ -40,7 +41,7 @@ const ItemListContainer = (props) => {
         
         swal({
           title:"Error",
-          text:"Porfavor, intentelo denuevo mas tarde",
+          text:"Por favor, intentelo denuevo mas tarde",
           icon:"error",
         })
 

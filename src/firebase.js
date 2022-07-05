@@ -20,4 +20,5 @@ const app = initializeApp(firebaseConfig);
 // 4) Obtener una referencia/puntero a la base de datos
 export const db = getFirestore(app);
 
+// Obtengo una referencia a la collecion que voy a usar
 export const collectionProd = collection(db, "productos");
