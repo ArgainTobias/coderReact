@@ -334,21 +334,16 @@ footer{
 .div-carrito{
 
     margin: 1.5rem;
+    // background-color: rgb(168, 207, 219);
+    background-color: rgb(241, 241, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
 
     h2{
         font-size: 2.5rem;
     }
 
-    
-    .vaciarCarrito{
-        
-        @extend .volver-a-comprar;
-        margin: 2rem;
-        padding: .5rem;
-        border: solid 1px black;
-        border-radius: 5px;
-        
-    }
 
     .volver-a-comprar{
 
@@ -374,9 +369,16 @@ footer{
     .div-productos-carrito{
 
         display: grid;
-        grid-template-columns: 70% 30%;
+        grid-template-columns: repeat(3,1fr);
         width: 75%;
         margin: 1rem 2rem;
+
+        img{
+
+            height: 140px;
+            object-fit: cover;
+
+        }
 
         p{
             display: grid;
@@ -402,4 +404,40 @@ footer{
 
     }
 
+}
+
+.div-vaciar-carrito{
+
+    display: grid;
+    place-content: center;
+
+    .vaciarCarrito{
+        
+        margin: 2rem 0;
+        padding: .5rem;
+        border: solid 1px black;
+        border-radius: 5px;
+        
+    }
+
+}
+
+form{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
+    margin: 2rem;
+    input{
+        padding: .4rem;
+        width: 30%;
+        margin-bottom: .5rem;
+        border-radius: 5px;
+        border: solid 1px black;
+    }
+    button{
+        padding: .4rem;
+        width: 30%;
+        border-radius: 5px;
+        border: solid 1px black;
+    }
 }

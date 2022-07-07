@@ -11,7 +11,7 @@ const Provider = contexto.Provider;
 export const CartContext = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
   const [cantidadTotal, setCantidadTotal] = useState(0);
-  const [precioTotal, setPrecioTotal] = useState();
+  const [precioTotal, setPrecioTotal] = useState(0);
   const ref = collectionProd;
   const consulta = getDocs(ref);
 
@@ -19,7 +19,7 @@ export const CartContext = ({ children }) => {
 
   const isInCart = (id) => carrito.some((prod) => prod.id === id);
 
-  const agregarProducto = (prodId, cantidad) => {
+  const agregarProducto = (prodId, cantidad, prodPrecio) => {
     let estaId = isInCart(prodId);
 
     consulta.then((res) => {
@@ -39,6 +39,7 @@ export const CartContext = ({ children }) => {
 
         setCarrito(copiaCarrito);
         setCantidadTotal(cantidadTotal + cantidad);
+        setPrecioTotal(precioTotal + prodPrecio * cantidad)
       } 
       else {
         swal({
@@ -61,6 +62,8 @@ export const CartContext = ({ children }) => {
       setCarrito(copiaCarrito);
       setCantidadTotal(cantidadTotal - producto.quantity);
 
+      setPrecioTotal(precioTotal - producto.price * producto.quantity)
+
       swal({
         title: "The product has been successfully disposed of",
         icon: "success",
@@ -69,9 +72,12 @@ export const CartContext = ({ children }) => {
   };
 
   const vaciarCarrito = () => {
+
     setCarrito([]);
 
     setCantidadTotal(cantidadTotal - cantidadTotal);
+
+    setPrecioTotal(0);
 
     swal({
       title: "Cart has been emptied",

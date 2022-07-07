@@ -13,6 +13,7 @@ const CartList = ({productos}) => {
           price={`$${prod.price}`}
           quantity={`Cantidad: ${prod.quantity}`}
           id={prod.id}
+          image={prod.image}
         />
 
       )

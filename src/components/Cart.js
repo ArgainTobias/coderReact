@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { contexto } from './CartContext';
 
-const Cart = ({title, price, quantity, id}) => {
+const Cart = ({title, price, quantity, id, image}) => {
 
   const {eliminarProducto} = useContext(contexto);
 
@@ -14,7 +14,7 @@ const Cart = ({title, price, quantity, id}) => {
 
   return (
     <div className='div-productos-carrito'>
-      <p>{title} - {price} - {quantity}</p> 
+      <img src={image} alt="" /><p>{title} - {price} - {quantity}</p> 
       <div>
         <button onClick={eliminar}>Remove item</button>
       </div>
