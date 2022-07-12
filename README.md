@@ -45,6 +45,8 @@ Ya podemos arrancar el proyecto
 ```
 
 
-## Video
+## Links útiles
 
-[[Funcionalidad proyecto final]](https://youtu.be/uD4OTPEbOe4)
+[Link al video de youtube (funcionalidad proyecto final)](https://youtu.be/uD4OTPEbOe4)
+
+[Link al deploy](https://jolly-gingersnap-eabcc7.netlify.app/)
