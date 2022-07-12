@@ -20,7 +20,7 @@ const ItemCount = ({ stock, initial, onAdd, id, price }) => {
     contador
       ? agregarProducto(id, contador, price)
       : swal({
-          title: "No ha seleccionado una cantidad válida de productos",
+          title: "You have not selected a valid quantity of products",
           icon: "error",
         });
   };

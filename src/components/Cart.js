@@ -14,7 +14,10 @@ const Cart = ({title, price, quantity, id, image}) => {
 
   return (
     <div className='div-productos-carrito'>
-      <img src={image} alt="" /><p>{title} - {price} - {quantity}</p> 
+      <div className='div-productos-carrito-img'>
+        <img src={image} alt="" />
+        <p>{title} - {price} - {quantity}</p> 
+      </div>
       <div>
         <button onClick={eliminar}>Remove item</button>
       </div>

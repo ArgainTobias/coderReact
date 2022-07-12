@@ -21,25 +21,33 @@ body{
 .header-con-carrito{
     display: grid;
     place-content: center;
-    grid-template-columns: 55% 40% 5%;
+    grid-template-columns: 50% 40% 10%;
+    grid-template-areas: "titulo ul iconoCarrito";
     padding: 2rem;
     padding-top: 1rem;
+    height: 120px;
     margin-bottom: 2rem;
     border-bottom: solid 2px black;
-    a{
+    a{        
         margin-top: .5rem;
         text-decoration: none;
-        width: 30%;
         height: 100%;
         display: grid;
         place-content: center;
+        grid-area: titulo;
         h2{
             color: black;
             text-transform: uppercase;
         }
     }
+    .titulo{
+        justify-content: left;
+        width: 60%;
+    }
     nav{
         color: black;
+        display: grid;
+        grid-area: ul;
         ul{
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -48,10 +56,17 @@ body{
                 a{
                     display: grid;
                     place-content: center;
-                    padding: 1rem;
+                    padding: .3rem;
                     text-decoration: none;
                     font-size: 1.4rem;
                     color: black;
+                    border-radius: 3px;
+                    text-align: center;
+                }
+
+                a:hover{
+                    background-color: white;
+                    transition: .5s;
                 }
 
                 .active{
@@ -59,20 +74,48 @@ body{
                 }
             }
         }
+
+        #check{
+            display: none;
+        }
+
+        #check:checked ~ ul{
+            left: 0;
+        }
+
+        .bars{
+            font-size: 2.8rem;
+            cursor: pointer;
+            line-height: 120px;
+            display: none;
+        }
+
     }
 
-    .icono-carrito{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        place-content: center;
-        background: linear-gradient(to left, #EBF0F1, #E7ECEE);
-        color: black;
-        border: #CBC8C3;
-        
-        i{
-            font-size: 2.8rem;
+    .contenedor-carrito-bar{
+
+        display: flex;
+        justify-content:center ;
+
+        .icono-carrito{
+            display: grid;
+            grid-area: iconoCarrito;
+            color: black;
+            
+            i{
+                font-size: 2.8rem;
+                margin: .6rem;
+            }
         }
+
+        p{
+            display: grid;
+            place-content: center;
+            font-size: 2rem
+        }
+
     }
+
 }
 
 .header-sin-carrito{
@@ -83,7 +126,7 @@ body{
 }
 
 main{
-    min-height: 100vh;
+    min-height:100vh ;
     h1{
         text-align: center;
         text-transform: uppercase;
@@ -215,11 +258,17 @@ main{
         padding: .5rem;
         background-color: white;
 
-        img{
-            border-radius: 10px;
-            height: 300px;
-            object-fit: cover;
+        .div-detalle-img{
+            display: grid;
+            place-content: center;
+            img{
+                border-radius: 10px;
+                height: 300px;
+                object-fit: cover;
+            }
+
         }
+
         
         .div-contador-container{
 
@@ -298,7 +347,8 @@ main{
 
 footer{
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1,.5fr);
+    place-content: center;
     margin-top: 2rem;
     padding: 2rem .5rem;
     padding-bottom: 1rem;
@@ -309,6 +359,9 @@ footer{
         text-align: center;
         color: black;
         margin-top: 1.5rem;
+    }
+    i{
+        font-size: 2.5rem;
     }
     nav{
         margin-bottom: 1rem;
@@ -329,12 +382,18 @@ footer{
             }
         }
     }
+    #check{
+        display: none;
+    }
+
+    .bars{
+        display: none;
+    }
 }
 
 .div-carrito{
 
     margin: 1.5rem;
-    // background-color: rgb(168, 207, 219);
     background-color: rgb(241, 241, 241);
     padding: 1rem;
     border-radius: 5px;
@@ -369,21 +428,28 @@ footer{
     .div-productos-carrito{
 
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        width: 75%;
+        grid-template-columns: 70% 30%;
         margin: 1rem 2rem;
 
-        img{
+        .div-productos-carrito-img{
 
-            height: 140px;
-            object-fit: cover;
-
-        }
-
-        p{
             display: grid;
-            place-content: center;
+            grid-template-columns: repeat(2,1fr);
+            justify-items: center;
+
+            img{
+    
+                height: 140px;
+                object-fit: cover;
+    
+            }
+            p{
+                display: grid;
+                place-content: center;
+                margin: 1rem 0;
+            }
         }
+
 
         div{
 
@@ -441,3 +507,5 @@ form{
         border: solid 1px black;
     }
 }
+
+@import 'base/mediaQueries';
