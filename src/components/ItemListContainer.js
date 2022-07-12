@@ -14,16 +14,13 @@ const ItemListContainer = (props) => {
   useEffect(() => {
 
     setLoading(true)
-    //1) Necesito la referencia de la coleccion
     const ref = category ? query(collectionProd, where("category", "==", category)) : collectionProd;
 
-    //2) Hago la consulta
     const consulta = getDocs(ref);
 
     consulta
       .then((res)=>{
       
-        // La consulta de firebase retorna un objeto, que adentro tiene un array (docs) el cual tiene una representacion de los productos
         const productosMapeados =  res.docs.map((referencia) => {
 
           const aux = referencia.data();
