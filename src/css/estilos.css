@@ -583,7 +583,8 @@ form button {
     height: 90vh;
     background-color: burlywood;
     top: 120px;
-    left: 100%;
+    left: 0%;
+    display: none;
     -webkit-transition: all .5s;
     transition: all .5s;
   }
@@ -604,7 +605,9 @@ form button {
     display: block;
   }
   .header-con-carrito nav #check:checked + ul, .header-sin-carrito nav #check:checked + ul {
-    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header-con-carrito .contenedor-carrito-bar, .header-sin-carrito .contenedor-carrito-bar {
     display: -webkit-box;

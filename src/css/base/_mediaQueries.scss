@@ -46,7 +46,8 @@
                 height: 90vh;
                 background-color: burlywood;
                 top: 120px;
-                left: 100%;
+                left: 0%;
+                display: none;
                 transition: all .5s;
                 li{
                     display: grid;
@@ -65,7 +66,7 @@
             }
 
             #check:checked + ul{
-                left: 0;
+                display: flex
             }
 
         }
@@ -83,7 +84,7 @@
     }
 
     .header-sin-carrito{
-        @extend .header-con-carrito;
+        // @extend .header-con-carrito;
 
     }
 
