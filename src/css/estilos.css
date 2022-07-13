@@ -101,10 +101,6 @@ body {
   display: none;
 }
 
-.header-con-carrito nav #check:checked ~ ul, .header-sin-carrito nav #check:checked ~ ul {
-  left: 0;
-}
-
 .header-con-carrito nav .bars, .header-sin-carrito nav .bars {
   font-size: 2.8rem;
   cursor: pointer;
@@ -582,7 +578,7 @@ form button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 90vh;
     background-color: burlywood;
@@ -606,6 +602,9 @@ form button {
     cursor: pointer;
     line-height: 120px;
     display: block;
+  }
+  .header-con-carrito nav #check:checked + ul, .header-sin-carrito nav #check:checked + ul {
+    left: 0;
   }
   .header-con-carrito .contenedor-carrito-bar, .header-sin-carrito .contenedor-carrito-bar {
     display: -webkit-box;

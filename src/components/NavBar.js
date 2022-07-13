@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-
 const NavBar = ({ inHeader }) => {
   return (
     <nav>
+      <label htmlFor="check">
+        <i class="bars material-symbols-outlined">menu</i>
+      </label>
+      <input type="checkbox" id="check" />
       <ul>
         <li>
           <NavLink
@@ -32,10 +35,6 @@ const NavBar = ({ inHeader }) => {
           </NavLink>
         </li>
       </ul>
-      <input type="checkbox" id="check" />
-      <label htmlFor="check">
-        <i class="bars material-symbols-outlined">dns</i>
-      </label>
     </nav>
   );
 };
