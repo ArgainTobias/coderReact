@@ -24,7 +24,7 @@ const NavBar = ({ inHeader }) => {
         </li>
         <li>
           <NavLink
-            to={inHeader ? "/categoria/electronics" : "http://Twitter.com"}
+            to={inHeader ? "/categoria/electronics" : `http://Twitter.com`}
           >
             {inHeader ? "Electronics" : <i class="fa-brands fa-twitter"></i>}
           </NavLink>

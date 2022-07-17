@@ -70,6 +70,14 @@ export const CartContext = ({ children }) => {
     }
   };
 
+  const finalizarCompra = () => {
+    setCarrito([]);
+
+    setCantidadTotal(cantidadTotal - cantidadTotal);
+
+    setPrecioTotal(0);
+  }
+
   const vaciarCarrito = () => {
 
     setCarrito([]);
@@ -91,6 +99,7 @@ export const CartContext = ({ children }) => {
     agregarProducto: agregarProducto,
     eliminarProducto: eliminarProducto,
     vaciarCarrito: vaciarCarrito,
+    finalizarCompra : finalizarCompra,
   };
 
   return <Provider value={valorDelContexto}>{children}</Provider>;

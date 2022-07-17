@@ -15,7 +15,7 @@ const CartListContainer = () => {
     phone: "",
   });
 
-  const { carrito, vaciarCarrito, precioTotal } = useContext(contexto);
+  const { carrito, vaciarCarrito, precioTotal, finalizarCompra } = useContext(contexto);
 
   const handleChange = (e) => {
     setData({
@@ -63,7 +63,7 @@ const CartListContainer = () => {
           })
         );
   
-      vaciarCarrito();
+      finalizarCompra();
     }
     else{
       swal({
