@@ -4,7 +4,7 @@ const NavBar = ({ inHeader }) => {
   return (
     <nav>
       <label htmlFor="check">
-        <i class="bars material-symbols-outlined">menu</i>
+        <i className="bars material-symbols-outlined">menu</i>
       </label>
       <input type="checkbox" id="check" />
       <ul>
@@ -12,21 +12,21 @@ const NavBar = ({ inHeader }) => {
           <NavLink
             to={inHeader ? "/categoria/clothing" : "https://www.facebook.com/"}
           >
-            {inHeader ? "Mens clothing" : <i class="fa-brands fa-facebook"></i>}
+            {inHeader ? "Mens clothing" : <i className="fa-brands fa-facebook"></i>}
           </NavLink>
         </li>
         <li>
           <NavLink
             to={inHeader ? "/categoria/jewelery" : "http://Instagram.com"}
           >
-            {inHeader ? "Jewelery" : <i class="fa-brands fa-instagram"></i>}
+            {inHeader ? "Jewelery" : <i className="fa-brands fa-instagram"></i>}
           </NavLink>
         </li>
         <li>
           <NavLink
             to={inHeader ? "/categoria/electronics" : `http://Twitter.com`}
           >
-            {inHeader ? "Electronics" : <i class="fa-brands fa-twitter"></i>}
+            {inHeader ? "Electronics" : <i className="fa-brands fa-twitter"></i>}
           </NavLink>
         </li>
         <li>
