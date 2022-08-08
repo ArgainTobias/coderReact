@@ -48,6 +48,10 @@
                 left: 0%;
                 display: none;
                 transition: all .5s;
+                z-index: 10;
+                border: solid 2px black;
+                border-top: none;
+                border-radius: 5px;
                 li{
                     display: grid;
                     justify-content: center;
@@ -55,6 +59,7 @@
                         width: 100%;
                     }
                 }
+
             }
 
             .bars{
@@ -82,10 +87,9 @@
 
     }
 
-    .header-sin-carrito{
-        @extend .header-con-carrito;
-
-    }
+    // .header-sin-carrito{
+    //     @extend .header-con-carrito;
+    // }
 
     main{
         

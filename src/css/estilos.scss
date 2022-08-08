@@ -10,8 +10,6 @@ body{
     background: #8e9eab;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 }
 
 #root{
@@ -27,7 +25,15 @@ body{
     padding-top: 1rem;
     height: 120px;
     margin-bottom: 2rem;
-    border-bottom: solid 2px black;
+    border-bottom: solid 1px black;
+    box-shadow: 1px 1px 10px rgb(0, 0, 3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     a{        
         margin-top: .5rem;
         text-decoration: none;
@@ -349,7 +355,8 @@ footer{
     padding: 2rem .5rem;
     padding-bottom: 1rem;
     min-height: 5rem;
-    border-top: solid 2px black;
+    border-top: solid 1px black;
+    box-shadow: 0px 0px 4px black;
     p{
         font-size: 1.2rem;
         text-align: center;

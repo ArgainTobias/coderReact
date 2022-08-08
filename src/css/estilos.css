@@ -31,7 +31,19 @@ body {
   padding-top: 1rem;
   height: 120px;
   margin-bottom: 2rem;
-  border-bottom: solid 2px black;
+  border-bottom: solid 1px black;
+  -webkit-box-shadow: 1px 1px 10px #000003;
+          box-shadow: 1px 1px 10px #000003;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #8e9eab;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#eef2f3), to(#8e9eab));
+  background: linear-gradient(to left, #eef2f3, #8e9eab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .header-con-carrito a, .header-sin-carrito a {
@@ -383,7 +395,9 @@ footer {
   padding: 2rem .5rem;
   padding-bottom: 1rem;
   min-height: 5rem;
-  border-top: solid 2px black;
+  border-top: solid 1px black;
+  -webkit-box-shadow: 0px 0px 4px black;
+          box-shadow: 0px 0px 4px black;
 }
 
 footer p {
@@ -584,6 +598,10 @@ form button {
     display: none;
     -webkit-transition: all .5s;
     transition: all .5s;
+    z-index: 10;
+    border: solid 2px black;
+    border-top: none;
+    border-radius: 5px;
   }
   .header-con-carrito nav ul li, .header-sin-carrito nav ul li {
     display: -ms-grid;
